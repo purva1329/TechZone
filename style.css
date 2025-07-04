@@ -1,0 +1,10 @@
+body{background: #e9e8e6;}
+*{margin: 0; padding: 0;font-family: system-ui;}
+.clearfix{clear: both;}
+.main{
+    height: 100px;
+    width: 900px;
+    padding: 10px;
+    background: linear-gradient(183deg,#3423ad,#8c1c80);
+    margin: 20px,auto;
+}

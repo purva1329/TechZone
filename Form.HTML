@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in Table</title>
+</head>
+<body>
+    <h1><center>Fill in the Form below </center></h1>
+    <form action="">
+        <table border="1">
+            <tr>
+                <td><label for="" ><b>Name</b></label></td>
+                <td><input type="text" required></td>
+            </tr>
+
+            <tr>
+                <td><label for=""><b>Password</b></label></td>
+                <td><input type="password" required maxlength="10" minlength="10"></td>
+            </tr>
+
+            <tr>
+                <td><label for=""><b>Feedback</b></label></td>
+                <td><textarea name="" id="" rows="4" cols="30"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for=""><b>Gender</b></label></td>
+                <td>
+                    <input type="radio" name="gender"> <label for="">Male</label>
+                    <input type="radio" name="gender"> <label for="">Female</label>
+                    <input type="radio" name="gender"> <label for="">Others</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for=""><b>Subjects</b></label></td>
+                <td>
+                    <input type="checkbox"> <label for="">Java</label>
+                    <input type="checkbox"> <label for="">Python</label>
+                    <input type="checkbox"> <label for="">UI/UX</label>
+                    <input type="checkbox"> <label for="">Maths</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset"> 
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

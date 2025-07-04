@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Logo with Rounded Square</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+    }
+
+    .box {
+      width: 700px;
+      height: 700px;
+      background: linear-gradient(30deg, #35e968, #fa7e1e, #d62976, #8ee722, #3643d5);
+      border: 10px solid rgb(140, 140, 140);
+      border-radius: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .title {
+      font-size: 56px;
+      color: rgb(21, 68, 196);
+      margin-bottom: 20px;
+    }
+
+    .youtube-logo {
+      width: 500px;
+      height: 300px;
+      background: linear-gradient(30deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      border-radius: 30px;
+      position: relative;
+    }
+
+    .play-button {
+      width: 0;
+      height: 0;
+      border-left: 90px solid white;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="title"><b>YouTube</b></div>
+    <div class="youtube-logo">
+      <div class="play-button"></div>
+    </div>
+  </div>
+</body>
+</html>

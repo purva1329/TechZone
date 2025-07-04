@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adventure</title>
+  <style>
+    * {
+      margin: 10px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Times New Roman', Times, serif;
+    }
+
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    .hero {
+      background-image: url('https://www.zicasso.com/static/3f7a794eca0542f82c4eb6efb772517a/6d821/3f7a794eca0542f82c4eb6efb772517a.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      color: rgb(255, 255, 255);
+    }
+
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 58px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px black;
+      color:#3899de;
+    }
+
+    .nav1 {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav1 a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .nav1 button {
+      padding: 8px 20px;
+      font-size: 35px;
+      background-color: #d82d99;
+      color: white;
+      border: none;
+      border-radius: 25px;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size:60px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px black;
+      position: relative;
+      display: inline-block;
+      color: rgb(33, 231, 155);
+    }
+
+    .content p {
+      margin-top: 50px;
+      font-size: 104px;
+      font-weight: bold;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px black;
+      color:rebeccapurple;
+    }
+    .content button {
+      padding: 12px 30px;
+      font-size: 34px;
+      background-color: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="navbar">
+      <div class="logo">ADVENTURE</div>
+      <div class="nav1">
+        <a href="#">Home</a>
+        <a href="#">Tours</a>
+        <a href="#">Explore</a>
+        <a href="#">About</a>
+        <button>More</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Explore the world</h2>
+      <p>A wonderful gift !!</p>
+      <button>Learn More</button>
+    </div>
+  </div>
+</body>
+</html>

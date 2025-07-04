@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram Logo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      
+    }
+
+    .insta-logo {
+      width: 1000px;
+      height: 1000px;
+      background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      border-radius: 200px;
+      position: relative;
+    }
+
+    .camera-frame {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 800px;
+      height: 800px;
+      transform: translate(-50%, -50%);
+      border: 50px solid white;
+      border-radius: 160px;
+      box-sizing: border-box;
+     
+    }
+
+    .lens {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+      border: 65px solid white;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lens-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 60px;
+      color:#930545;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .flash {
+      position: absolute;
+      top: 200px;
+      right: 190px;
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="insta-logo">
+    <div class="lens">
+      <div class="lens-text">Instagram</div>
+    </div>
+    <div class="camera-frame"></div>
+    <div class="flash"></div>
+  </div>
+
+</body>
+</html>

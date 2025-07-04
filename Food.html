@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documents</title>
+     <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      background:rgb(227, 2, 2);
+    }
+
+    nav {
+      height: 130px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px;
+      position: fixed;
+      top: 0;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .logo img {
+      height: 150px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 90px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: rgb(31, 164, 231);
+      font-weight: bold;
+      font-size: 50px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: rgb(233, 29, 165);
+    }
+
+    nav .icon i {
+      font-size: 50px;
+      color: rgb(233, 29, 165);
+      margin: 0 10px;
+      gap: 50px;
+    }
+
+    nav .icon i:hover {
+      color: rgb(31, 164, 231);
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      padding:0px 90px 20px;
+      max-width: 1600px;
+      margin: 0 auto;
+      gap:50px ;
+    }
+
+    .text {
+      font-size: 100px;
+      color: black;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .text .highlight {
+      color: orange;
+      font-style: italic;
+    }
+    image{
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+
+    }
+
+    .image img {
+      height: 1200px;
+      width: auto;
+      object-fit: contain;
+      margin-left:400px ;
+      margin-top: 150px;
+    }
+
+    @media (max-width: 1200px) {
+      .image img {
+        height: 800px;
+      }
+
+      .text {
+        font-size: 45px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .image img {
+        height: 400px;
+      }
+
+      .text {
+        padding: 0;
+        font-size: 36px;
+      }
+    }
+    p{
+        width:1500px ;
+        text-align: justify;
+        position: relative;
+        left:450px ;
+        bottom:480px;
+        font-size: 40px;
+        font-family:unset;
+        line-height: 1.4;
+        color: rgb(191, 191, 191);
+    }
+  .button {
+  position: relative;
+   left:750px ;
+ bottom:400px;
+  
+}
+
+.button a {
+  display: inline-block;
+  background-color: rgb(255, 204, 2);
+  color: rgb(12, 5, 217);
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 48px;
+  transition: 0.3s ease;
+  width: 350px;
+  height:100px ;
+  text-align: center;
+}
+
+.button a:hover {
+  background-color: rgb(97, 193, 206);
+  color: rgb(255, 255, 255);
+}
+
+.button i {
+  font-size: 20px;
+  color: black;
+  position: absolute;
+  left: 190px;
+  top: 10px;
+}
+
+.menu-section {
+  margin:0;
+  padding: 0;
+  width: 100vw;
+  text-align: center;
+}
+
+.menu-section h1 {
+  font-size: 80px;
+  color: yellow;
+  margin: 0;
+  padding: 40px 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.menu-item p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 45px;
+  font-weight: bold;
+  color: rgb(105, 242, 107);
+
+  padding: 12px 24px;
+  border-radius: 12px;
+  margin: 0;
+  text-align: center;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.menu-item:hover p {
+  background-color: rgba(255, 204, 0, 0.8);
+  color: rgb(217, 0, 233);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.about-section {
+  width: 100%;
+  padding: 100px 60px;
+  background-color: rgb(227, 2, 2);
+  margin-bottom: 800px;
+  position: relative;
+}
+
+.about-container {
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+
+.about-text h1 {
+  font-size: 100px;
+  font-weight: bold;
+  color: yellow;
+  margin-left:200px;
+  margin-bottom:480px;
+  text-align: center;
+}
+
+.about-text p {
+  font-size: 40px;
+  font-family: unset;
+  line-height: 1.6;
+  margin-left:800px ;
+  margin-bottom: 60px;
+  text-align: justify;
+  color:rgb(191, 191, 191);
+}
+
+
+.about_button {
+  display: inline-block;
+  background-color: rgb(255, 204, 2);
+  color: rgb(12, 5, 217);
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 0.3s ease;
+  width: 250px;
+  margin-bottom:700px; 
+}
+
+.about_button:hover {
+  background-color: rgb(0, 212, 235);
+  transform: scale(1.05);
+}
+.image1{
+  margin-bottom: 300px;
+}
+
+
+  </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+
+  />
+</head>
+
+<body>
+<nav>
+    <div class="logo">
+      <img src="https://png.pngtree.com/png-vector/20250217/ourmid/pngtree-unique-food-logo-png-image_15488394.png" alt="logo" />
+    </div>
+
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Menu">Menu</a></li>
+      <li><a href="#Gallary">Gallary</a></li>
+      <li><a href="#Review">Review</a></li>
+      <li><a href="#Order">Order</a></li>
+    </ul>
+
+    <div class="icon">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-heart"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="text">
+      <div>Get Fresh <span class="highlight">Food</span></div>
+      <div>in a Easy Way</div>
+    </div>
+
+    <div class="image">
+      <img src="https://img.freepik.com/premium-photo/hamburger-with-flying-ingredients_158023-1269.jpg" alt="Burger" />
+    </div>
+  </div>
+  <p
+p>Welcome to FOOD CORNER, the ultimate destination for lovers of rich, authentic English-inspired cuisine! Our menu is bursting with flavor and creativity, offering a delicious range of dishes that satisfy every craving.Indulge in our crispy-crust pizzas, juicy burgers, and creamy pasta — all made with premium ingredients and signature seasonings. Craving something unique? Try our mouthwatering lasagna layered with cheesy perfection, or refresh yourself with our wide selection of cool and classic drinks.Every bite brings you closer to the taste of English flavors fused with modern style. Whether you're dining solo, with friends, or ordering online — we promise a fresh, flavorful, and unforgettable food experience.</p>
+
+<div class="button">
+    <a href="#">Order Now</a>
+</div>
+
+<div class="menu-section">
+  <h1>Our Menu</h1>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <img src="https://content.jdmagicbox.com/comp/pune/d7/020pxx20.xx20.121207123930.b7d7/catalogue/hot-pizza-rasta-peth-pune-pizza-outlets-jaih18igmz.jpg" alt="Pizza">
+      <p>Pizza</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png" alt="Pasta">
+      <p>Pasta</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2503,h_2503,c_limit/Smashburger-recipe-120219.jpg" alt="Burger">
+      <p>Burger</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://media.istockphoto.com/id/157615990/photo/lasagna.jpg?s=612x612&w=0&k=20&c=f8o7dygPOgFPnvk8wKtDW2QgmBpACMNPFRQtm7x0u7U=" alt="Lazaniya">
+      <p>Lazaniya</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://static01.nyt.com/images/2024/06/17/multimedia/cm-halloumi-arugula-tomato-sandwich-chtm/cm-halloumi-arugula-tomato-sandwich-chtm-jumbo.jpg" alt="Sandwitch">
+      <p>Sandwitch</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdU6PILG8sKcDKNYZ2vwb3UfH-zOcinAP82w&s" alt="French Fries">
+      <p>French Fries</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://www.thespruceeats.com/thmb/O2C5BeifrDgI4Q77xF6UHU36S-A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegetarian-grilled-paneer-cheese-in-tandoori-seasoning-3378478-hero-01-423aa41a66b744baad9aa9053b65bf03.jpg" alt="Grilled Paneer">
+      <p>Grilled Paneer</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://whatsgabycooking.com/wp-content/uploads/2023/01/Master.jpg" alt="Avacado Toast">
+      <p>Avacado Toast</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://www.allrecipes.com/thmb/sueXmRXgK-S27uRzTrJuGb-_Smc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/216077-garlic-bread-spread-step-beauty-4x3-BP-3169-ef03a4a12d8c46e196055555be5b8d79.jpg" alt="Garlic Bread">
+      <p>Garlic Bread</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://ifoodreal.com/wp-content/uploads/2022/01/fg-air-fryer-nachos-recipe-2.jpg" alt="Nachos">
+      <p>Nachos</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://spicecravings.com/wp-content/uploads/2020/12/Paneer-kathi-Roll-Featured-1.jpg" alt="Paneer Rolls">
+      <p>Paneer Rolls</p>
+    </div>
+    <div class="menu-item">
+      <img src="https://www.archanaskitchen.com/images/archanaskitchen/10-Brands/DelMonte-KidsRecipes/Spaghetti_Pasta_Recipe_In_Creamy_Tomato_Sauce_-_Kids_Recipes_Made_With_Del_Monte-3_400.jpg" alt="Spaghetti">
+      <p>Spaghetti</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="about-text">
+  <h1>About Us</h1>
+
+  <p>
+   We’re not just serving food — we’re serving experiences. Inspired by the rich essence of English cuisine, our menu brings together modern tastes and timeless comfort. From sizzling burgers to oven-baked pizzas, from creamy pasta to layered lasagna — every dish is crafted with love, care, and handpicked ingredients.<p>Whether you're dining with friends or grabbing a quick bite, we promise you a meal that’s delicious, fresh, and unforgettable. With a focus on flavor, quality, and presentation, we bring your cravings to life — one plate at a time.Whether you're dining with friends, enjoying a family meal, or grabbing a quick bite on the go, we guarantee a delicious, fresh, and unforgettable experience every time.> At FOOD CORNER, we believe in more than just great taste — we believe in creating moments. That’s why we focus on premium quality, mouthwatering presentation, and fast, friendly service.
+  <p> ✔️<b> Authentic English-Inspired Flavors:</b>
+Savor the rich, comforting taste of English cuisine, recreated with a modern twist to suit today’s food lovers.
+</p><p>
+✔️ <b>Fresh Ingredients, Always:</b>
+We believe great food starts with great ingredients. That’s why we handpick fresh veggies, spices, sauces, and toppings every single day.
+</p><p>
+✔️ <b>Creative & Customizable Menu:</b>
+From cheesy lasagna to loaded burgers, crispy pizzas to refreshing drinks — we offer a wide variety to suit every craving.
+</p><p>
+✔️<b>Fast, Friendly Service: </b> 
+Whether you dine in or order online, we make sure your food arrives hot, fresh, and served with a smile.
+</p><p>
+
+✔️ <b>Stylish, Clean, and Welcoming Vibe: </b>
+Our presentation and ambiance are designed for comfort, making every visit feel special — like home, only tastier.
+</p>
+
+ <div class="image1">
+    <img src="https://img.freepik.com/premium-photo/vibrant-colorful-dish-explosion-captured-midair-red-background-dynamic-food-photography-showcasing-ingredients-ideal-culinary-blogs-advertisements-style-modern-artistic-ai_372197-52019.jpg" alt="image1">
+
+ <a href="#" class="about_button">Order  Now</a>
+  </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

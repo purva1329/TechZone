@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nature Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    #main-image {
+      width: 80%;
+      max-width: 900px;
+      height: 750px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(5, 81, 110, 0.3);
+      margin-bottom: 30px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button-container button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #b50eda;
+      color: rgb(0, 225, 255);
+      font-size: 30px;
+      font-family: 'Times New Roman', Times, serif;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button-container button:hover {
+      background-color: #0084ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Explore Beautiful Destinations</h1>
+  <img id="main-image" src="https://img.freepik.com/free-vector/destination-signs-background_23-2148045650.jpg?semt=ais_items_boosted&w=740" alt="Main Nature Image" />
+
+  <div class="button-container">
+    <button onclick="changeImage('https://dpauls.com/destinations/_nuxt/img/cityscape-usa.11586ce.jpg')">USA</button>
+    <button onclick="changeImage('https://hblimg.mmtcdn.com/content/hubble/img/dest_img/mmt/activities/m_rome_destination_main_1_l_667_1000.jpg')">Italy</button>
+    <button onclick="changeImage('https://media.istockphoto.com/id/1156637415/photo/merlion-singapore.jpg?s=612x612&w=0&k=20&c=4f1GwWRFMyikLJKsad1fKIGFWAE0NZJWtrbrNIhwDvA=')">Singapur</button>
+    <button onclick="changeImage('https://t3.ftcdn.net/jpg/02/85/64/82/360_F_285648275_VAq7WTS7UmNAaeYbujhBPR5a8pZ6YT1t.jpg')">Brazil</button>
+    <button onclick="changeImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz2V8AkJMQfUFykTLRWjbuW7SWSJdzD_P1wQ&s')">Franch</button>
+  </div>
+
+  <script>
+    function changeImage(url) {
+      document.getElementById('main-image').src = url;
+    }
+  </script>
+
+</body>
+</html>
+

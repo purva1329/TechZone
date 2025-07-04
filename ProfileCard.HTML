@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Purva Shinde - Student Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #eeeeec;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .child {
+            display: none;
+        }
+
+        .child + label {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .child + label::before,
+        .child + label::after {
+            content: "";
+            position: absolute;
+            background: #ffffff;
+            border-radius: 20px;
+            transition: all 0.5s;
+        }
+
+        .child + label::before {
+            top: -60px;
+            left: -50px;
+            width: 80px;
+            height: 40px;
+            background: #a7a2a2;
+        }
+
+        .child + label::after {
+            top: -57px;
+            left: -46px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+        }
+
+        .child:checked + label::before {
+            background: #2d197e;
+        }
+
+        .child:checked + label::after {
+            left: -12px;
+        }
+
+        .wrapper {
+            width: 800px;
+            background: rgb(255, 255, 255);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+            transition: background 0.6s ease, color 0.6s ease;
+            overflow: hidden;
+        }
+
+        .child:checked ~ .wrapper {
+            background: #31394d;
+            color: #ffffff;
+        }
+
+        .wrapper .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wrapper .profile img.thumbnail {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .wrapper .profile h3.name {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .wrapper .profile p.title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #565656;
+        }
+
+        .child:checked ~ .wrapper .profile p.title {
+            color: #aaa;
+        }
+
+        .wrapper .profile p.description {
+            font-size: 20px;
+            margin: 15px 0;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .child:checked ~ .wrapper .grid-item {
+            background-color: #3f455d;
+            color: #fff;
+            border-color: #555;
+        }
+
+        .grid-item h4 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #d673a3;
+            color: #c90a6d;
+        }
+
+        .child:checked ~ .wrapper .grid-item h4 {
+            color: #ffb3d9;
+            border-bottom-color: #ffb3d9;
+        }
+
+        .grid-item ul {
+            list-style: none;
+            padding-left: 0;
+            font-size:20px;
+        }
+
+        .grid-item ul li {
+            margin: 5px 0;
+        }
+
+        .btn {
+            margin: 20px auto 0;
+            display: block;
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #2b39bb, #ff48a0);
+            color: #fff;
+            cursor: pointer;
+            box-shadow: 0 13px 26px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+    </style>
+</head>
+<body>
+
+<input id="slider" class="child" type="checkbox" />
+<label for="slider"></label>
+
+<div class="wrapper">
+    <div class="profile">
+        <img src="WhatsApp Image 2025-06-06 at 19.44.09_9e581819.jpg" class="thumbnail" />
+        <h3 class="name">Purva Shinde</h3>
+        <br>
+        <p class="title">Bharti Vidyapeeth, Pune
+          <br>
+          Computer Technology Diploma Student</p>
+        <p class="description">
+Aspiring software developer with a strong foundation in C and C++, currently expanding expertise in 
+Java, web development, database management, AI, machine learning, and Python. Committed to 
+continuous learning and professional development, aiming to contribute to innovative software 
+solutions and gain experience across diverse tech domains.
+        </p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h4>Contact</h4>
+            <ul>
+                <li><b>Email:</b> purvasshinde.29@gmail.com</li>
+                <br> 
+                <li><b>Contact:</b> 8261034064</li>
+            </ul>
+        </div>
+
+        <div class="grid-item">
+            <h4>Academic Performance</h4>
+            <ul>
+                <li>10th Grade: 92%</li>
+                <li>Diploma 1st Sem: 83.13%</li>
+                <li>Diploma 2nd Sem: 85.5%</li>
+                <li>Diploma 3rd Sem: 90.47%</li>
+            </ul>
+        </div>
+
+        <div class="grid-item">
+            <h4>Skills</h4>
+            <ul>
+                <li>C, C++ Programming</*li>
+                <li>Java Basics</li>
+                <li>HTML, CSS, Figma Design</li>
+                <li>Basic SQL</li>
+            </ul>
+        </div>
+
+        <div class="grid-item">
+            <h4>Languages</h4>
+            <ul>
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Marathi</li>
+            </ul>
+        </div>
+
+        <div class="grid-item">
+            <h4>Projects</h4>
+            <ul>
+                <li>Calendar Application (C)</li>
+                <li>Library Management System (C/C++)</li>
+                <li>Tourist Place Interface Design (Figma)</li>
+            </ul>
+        </div>
+
+        <div class="grid-item">
+            <h4>Hobbies & Interests</h4>
+            <ul>
+                <li>Designing</li>
+                <li>Crafting</li>
+                <li>Sketching</li>
+                <li>Video Editing</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="btn">Contact Me</button>
+</div>
+
+</body>
+</html>

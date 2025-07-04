@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mess Time Selection</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #f2f2f2; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: linear-gradient(120deg, #f6d365, #e68065, #fbc2eb, #a6c1ee, #6d91ce, hotpink);
+      background-size: 400% 400%;
+      animation: formGradient 4s ease infinite;
+      padding: 40px;
+      width: 340px;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      color: #3f5efb;
+    }
+
+    @keyframes formGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container h2 {
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 600;
+      font-family: 'Times New Roman', Times, serif;
+      color: #ed13b7;
+      text-shadow: 1px 1px 3px #00000055;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #0066ff;
+      background: rgba(252, 206, 244, 0.9);
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    input:hover, select:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: scale(1.01);
+    }
+
+    input:focus, select:focus {
+      box-shadow: 0 0 10px rgba(63, 94, 251, 0.6);
+    }
+
+    button {
+      background: linear-gradient(to right, #5ca2f8, #59cf8a);
+      color: white;
+      border: none;
+      height: 40px;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight:bold ;
+      font-family: 'Times New Roman', Times, serif;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.4s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to left, #fc466b, #afd652);
+      transform: scale(1.05);
+    }
+
+    #head {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      text-shadow: 1px 1px 2px #00000055;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Time Selection!!</h2>
+
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <select id="op">
+      <option value="9 to 12">🌞 9 AM to 12 PM</option>
+      <option value="12 to 5">🍛 12 PM to 5 PM</option>
+      <option value="5 to 12">🌙 5 PM to 12 AM</option>
+    </select>
+
+    <button onclick="getclick()">SUBMIT</button>
+
+    <h1 id="head"></h1>
+  </div>
+
+  <script>
+    function getclick() {
+      const name = document.getElementById("name").value;
+      const time = document.getElementById("op").value;
+      const head = document.getElementById("head");
+      let msg = "";
+
+      if (time === "9 to 12") {
+        msg = `🌞 Good morning, ${name || "guest"}! You selected Breakfast  (9 AM to 12 PM).`;
+      } else if (time === "12 to 5") {
+        msg = `🍛 Good afternoon, ${name || "guest"}! You selected Lunch (12 PM to 5 PM).`;
+      } else if (time === "5 to 12") {
+        msg = `🌙 Good evening, ${name || "guest"}! You selected Dinner (5 PM to 12 AM).`;
+      } else {
+        msg = `👋 Hi ${name || "guest"}, please select a valid time!`;
+      }
+
+      head.innerHTML = msg;
+    }
+  </script>
+
+</body>
+</html>
